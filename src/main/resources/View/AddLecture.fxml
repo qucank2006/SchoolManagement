@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="498.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dacs1.Controller.Admin.AddLectureController">
+   <children>
+      <AnchorPane fx:id="main_form" layoutX="158.0" layoutY="128.0" prefHeight="498.0" prefWidth="681.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="467.0" prefWidth="648.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="radius" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <FontAwesomeIcon glyphName="USER" layoutX="362.0" layoutY="405.0" opacity="0.15" size="20EM" text="" />
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="55.0" prefWidth="238.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Thông tin giảng viên">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="78.0" text="Mã giảng viên: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="lectureCode" layoutX="146.0" layoutY="71.0" prefHeight="35.0" prefWidth="191.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <AnchorPane layoutX="471.0" layoutY="66.0" prefHeight="182.0" prefWidth="119.0" stylesheets="@../CSS/AdminFormStyles.css">
+                     <children>
+                        <ImageView fx:id="lecture_ImageView" fitHeight="145.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button fx:id="lecture_importBtn" layoutY="145.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="119.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm ảnh" />
+                     </children>
+                     <styleClass>
+                        <String fx:value="white-bg" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </AnchorPane>
+                  <Label layoutX="35.0" layoutY="128.0" text="Tên giảng viên: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lectureName" layoutX="146.0" layoutY="121.0" prefHeight="35.0" prefWidth="191.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <Label layoutX="66.0" layoutY="178.0" text="Ngày sinh: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="lectureBirth" layoutX="146.0" layoutY="171.0" prefHeight="35.0" prefWidth="191.0" styleClass="custom-datepicker" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <Label layoutX="99.0" layoutY="228.0" text="Khoa: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="lectureDepartment" layoutX="146.0" layoutY="221.0" prefWidth="150.0" promptText="Chọn ..." />
+                  <Label layoutX="91.0" layoutY="278.0" text="Học vị: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="lectureDegree" layoutX="146.0" layoutY="271.0" prefWidth="191.0" promptText="Chọn ..." />
+                  <Label layoutX="63.0" layoutY="328.0" text="Điện thoại: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lecturePhoneNum" layoutX="146.0" layoutY="321.0" prefHeight="35.0" prefWidth="191.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <Label layoutX="95.0" layoutY="378.0" text="Email: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lectureEmail" layoutX="146.0" layoutY="371.0" prefHeight="35.0" prefWidth="191.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <Label layoutX="84.0" layoutY="428.0" text="Địa chỉ: ">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lectureAddress" layoutX="146.0" layoutY="421.0" prefHeight="35.0" prefWidth="191.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                  <Button fx:id="lecture_addBtn" layoutX="483.0" layoutY="403.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="95.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm" />
+                  <Button fx:id="lecture_updateBtn" layoutX="483.0" layoutY="403.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="95.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Cập nhật" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

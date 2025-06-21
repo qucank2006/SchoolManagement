@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dacs1.Controller.ChatViewController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="70.0" layoutY="84.0" prefHeight="503.0" prefWidth="857.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <ListView fx:id="userListView" prefHeight="503.0" prefWidth="237.0" stylesheets="@../CSS/ChatViewStyles.css" BorderPane.alignment="CENTER">
+                     <styleClass>
+                        <String fx:value="list-view" />
+                        <String fx:value="list-cell" />
+                     </styleClass></ListView>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="503.0" prefWidth="620.0" styleClass="white-bg" stylesheets="@../CSS/ChatViewStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane layoutX="14.0" layoutY="41.0" prefHeight="386.0" prefWidth="592.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="41.0">
+                           <children>
+                              <TextArea fx:id="chatArea" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="377.0" prefWidth="544.0" styleClass="text-field" stylesheets="@../CSS/ChatViewStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="433.0" prefHeight="61.0" prefWidth="592.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                           <children>
+                              <TextField fx:id="messageField" layoutX="14.0" layoutY="9.0" prefHeight="38.0" prefWidth="464.0" styleClass="text-field" stylesheets="@../CSS/ChatViewStyles.css" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="9.0" />
+                              <Button fx:id="sendButton" layoutX="492.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleSendButtonAction" prefHeight="38.0" prefWidth="86.0" stylesheets="@../CSS/ChatViewStyles.css" text="Gửi" textFill="WHITE">
+                                 <graphic>
+                                    <FontAwesomeIcon fill="WHITE" glyphName="SEND" />
+                                 </graphic></Button>
+                           </children>
+                        </AnchorPane>
+                        <FontAwesomeIcon glyphName="COMMENTS" layoutX="5.0" layoutY="36.0" size="2.5em">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.7058823704719543" green="0.5411764979362488" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="0.8392156958580017" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </FontAwesomeIcon>
+                        <Label layoutX="43.0" layoutY="-1.0" prefHeight="36.0" prefWidth="68.0" styleClass="heading" stylesheets="@../CSS/ChatViewStyles.css" text="Chat" />
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

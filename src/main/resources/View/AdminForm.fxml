@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dacs1.Controller.Admin.AdminController">
+   <children>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane styleClass="nav-form" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="COGS" layoutX="67.0" layoutY="96.0" size="7em" />
+                        <Label layoutX="77.0" layoutY="118.0" text="Xin chào," textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name_nav" alignment="CENTER" layoutX="15.0" layoutY="145.0" prefHeight="26.0" prefWidth="199.0" text="Admin" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="112.0" layoutY="179.0" startX="-100.0" stroke="WHITE" />
+                        <Button fx:id="home_nav" layoutX="13.0" layoutY="203.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="    Trang chủ">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="HOME" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="student_nav" layoutX="13.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text=" Quản lý sinh viên" AnchorPane.leftAnchor="13.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="GRADUATION_CAP" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="lecture_nav" layoutX="13.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="   Quản lý giảng viên">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="admin_nav" layoutX="13.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="   Quản lý admin">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="COG" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="department_nav" layoutX="13.0" layoutY="435.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="   Quản lý khoa">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="BOOK" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="class_nav" layoutX="13.0" layoutY="493.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="    Quản lý lớp">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="BOOKMARK" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout_Btn" layoutX="13.0" layoutY="650.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="135.0" styleClass="signout-btn" stylesheets="@../CSS/AdminFormStyles.css" text="Đăng xuất" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="78.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" text="" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="chat_nav" layoutX="14.0" layoutY="551.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/AdminFormStyles.css" text="   Chat">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="COMMENTS" size="1.6em" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="homeForm" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="161.0" prefWidth="914.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="154.0" prefWidth="1250.0">
+                                             <children>
+                                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="126.0" prefWidth="250.0" stylesheets="@../CSS/AdminFormStyles.css">
+                                                   <styleClass>
+                                                      <String fx:value="nav-form" />
+                                                      <String fx:value="shadow" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="21.0" layoutY="86.0" size="5.5em" />
+                                                      <Label layoutX="140.0" layoutY="15.0" text="Số sinh viên" textFill="WHITE" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="13.6">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="studentCount" alignment="CENTER_RIGHT" layoutX="98.0" layoutY="58.0" prefHeight="54.0" prefWidth="138.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="325.5" layoutY="14.0" prefHeight="126.0" prefWidth="250.0" stylesheets="@../CSS/AdminFormStyles.css">
+                                                   <styleClass>
+                                                      <String fx:value="nav-form" />
+                                                      <String fx:value="shadow" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="17.0" layoutY="85.0" size="5.5em" />
+                                                      <Label layoutX="128.0" layoutY="14.0" text="Số giảng viên" textFill="WHITE" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="13.6">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="LectureCount" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="57.0" prefHeight="54.0" prefWidth="138.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="637.0" layoutY="14.0" prefHeight="126.0" prefWidth="250.0" stylesheets="@../CSS/AdminFormStyles.css">
+                                                   <styleClass>
+                                                      <String fx:value="nav-form" />
+                                                      <String fx:value="shadow" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="BOOKMARK" layoutX="16.0" layoutY="85.0" size="5.5em" />
+                                                      <Label layoutX="140.0" layoutY="14.0" text="Tổng số lớp" textFill="WHITE" AnchorPane.bottomAnchor="85.2" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="13.6">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="classCount" alignment="CENTER_RIGHT" layoutX="93.0" layoutY="57.0" prefHeight="54.0" prefWidth="138.0" text="0" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane layoutX="948.5" layoutY="14.0" prefHeight="126.0" prefWidth="250.0" stylesheets="@../CSS/AdminFormStyles.css">
+                                                   <styleClass>
+                                                      <String fx:value="nav-form" />
+                                                      <String fx:value="shadow" />
+                                                      <String fx:value="radius" />
+                                                   </styleClass>
+                                                   <children>
+                                                      <FontAwesomeIcon fill="WHITE" glyphName="BOOK" layoutX="16.0" layoutY="85.0" size="5.5em" />
+                                                      <Label layoutX="126.0" layoutY="14.0" text="Tổng số khoa" textFill="WHITE" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="13.6">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="apartmentCount" alignment="CENTER_RIGHT" layoutX="93.0" layoutY="57.0" prefHeight="54.0" prefWidth="138.0" text="0" textFill="WHITE" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                                                         <font>
+                                                            <Font size="36.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </ScrollPane>
+                                    <AnchorPane layoutX="14.0" layoutY="191.0" prefHeight="550.0" prefWidth="1194.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="191.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <TableView fx:id="activityLogTableView" layoutX="14.0" layoutY="57.0" prefHeight="479.0" prefWidth="1166.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="57.0">
+                                            <columns>
+                                              <TableColumn fx:id="activityLogTimeCol" prefWidth="150.0" text="Thời gian" />
+                                              <TableColumn fx:id="activityLogUserCol" prefWidth="150.0" text="Người thực hiện" />
+                                              <TableColumn fx:id="activityLogActionCol" prefWidth="122.0" text="Hành động" />
+                                              <TableColumn fx:id="activityLogEntityCol" prefWidth="140.0" text="Đối tượng" />
+                                              <TableColumn fx:id="activityLogEntityNameCol" prefWidth="210.0" text="Tên đối tượng" />
+                                              <TableColumn fx:id="activityLogDescriptionCol" prefWidth="548.0" text="Mô tả" />
+                                            </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <Label layoutX="449.0" prefHeight="42.0" prefWidth="297.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Bảng trích xuất hoạt động" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="studentForm" layoutX="208.0" layoutY="173.0" prefHeight="736.0" prefWidth="1008.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="728.0" prefWidth="1003.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="74.0" prefHeight="39.0" prefWidth="198.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Quản lý sinh viên" />
+                                    <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="35.0" layoutY="38.0" size="2.5em">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <TextField fx:id="StudentForm_search" layoutX="614.0" layoutY="25.0" prefHeight="35.0" prefWidth="249.0" promptText="Tìm kiếm" styleClass="search" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="25.0" />
+                                    <TableView fx:id="StudentForm_tableView" layoutX="15.2" layoutY="92.0" prefHeight="555.0" prefWidth="950.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0">
+                                       <columns>
+                                          <TableColumn fx:id="StudentForm_stuCodeCol" prefWidth="92.79998433589935" text="Mã sinh Viên" />
+                                          <TableColumn fx:id="StudentForm_stuNameCol" prefWidth="218.0" text="Họ Và Tên" />
+                                          <TableColumn fx:id="StudentForm_stuBirthCol" prefWidth="121.0" text="Ngày sinh" />
+                                          <TableColumn fx:id="StudentForm_stuGenderCol" prefWidth="77.0" text="Giới tính" />
+                                          <TableColumn fx:id="StudentForm_stuPhoneCol" prefWidth="117.0" text="Điện thoại" />
+                                          <TableColumn fx:id="StudentForm_stuEmailCol" prefWidth="216.0" text="email" />
+                                          <TableColumn fx:id="StudentForm_stuAddressCol" prefWidth="131.0" text="Địa chỉ" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Button fx:id="StudentForm_addBtn" layoutX="761.0" layoutY="674.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="92.0" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="StudentForm_fixBtn" layoutX="668.0" layoutY="674.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="92.0" stylesheets="@../CSS/AdminFormStyles.css" text="Sửa" AnchorPane.rightAnchor="243.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="StudentForm_deleteBtn" layoutX="767.0" layoutY="674.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="92.0" stylesheets="@../CSS/AdminFormStyles.css" text="Xoá" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="144.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="621.0" layoutY="48.0" size="1.5em" text="" AnchorPane.rightAnchor="365.2857151031494" AnchorPane.topAnchor="32.571428298950195">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Label layoutX="47.0" layoutY="61.0" text="Lớp:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="242.0" layoutY="62.0" text="GVCN: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="StudentForm_classBox" layoutX="80.0" layoutY="53.0" prefWidth="150.0" />
+                                    <Label fx:id="StudentForm_headLectureLabel" layoutX="297.0" layoutY="64.0" text="Label" />
+                                    <Button fx:id="StudentForm_clearBtn" layoutX="867.0" layoutY="674.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="92.0" stylesheets="@../CSS/AdminFormStyles.css" text="Làm mới" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="44.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="lectureForm" layoutX="5.0" layoutY="5.0" prefHeight="705.6" prefWidth="978.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="728.0" prefWidth="650.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <FontAwesomeIcon glyphName="USER" layoutX="35.0" layoutY="38.0" size="2.5em">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Label layoutX="68.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Quản Lý Giảng Viên" />
+                                    <TableView fx:id="lectureTableView" layoutX="14.0" layoutY="66.0" prefHeight="585.0" prefWidth="667.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="66.0">
+                                      <columns>
+                                        <TableColumn fx:id="lectureCode_col" prefWidth="124.0" text="Mã giảng viên" />
+                                        <TableColumn fx:id="lectureName_col" prefWidth="249.0" text="Tên Giảng viên" />
+                                          <TableColumn fx:id="lectureDegree_col" prefWidth="156.0" text="Học vị" />
+                                          <TableColumn fx:id="lectureDepartment_col" prefWidth="136.0" text="Khoa" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Button fx:id="lectureForm_Fixbtn" layoutX="370.0" layoutY="668.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="72.0" stylesheets="@../CSS/AdminFormStyles.css" text="Sửa" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="208.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="lectureForm_Addbtn" layoutX="289.0" layoutY="668.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="72.0" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="289.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button fx:id="lectureForm_Deletebtn" layoutX="449.0" layoutY="668.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="72.0" stylesheets="@../CSS/AdminFormStyles.css" text="Xoá" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="129.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                    <TextField fx:id="LectureForm_search" layoutX="357.0" layoutY="14.0" prefHeight="34.0" prefWidth="236.0" promptText="Tìm kiếm" styleClass="search" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.rightAnchor="57.0" AnchorPane.topAnchor="14.0" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="362.0" layoutY="38.0" size="1.5em" AnchorPane.rightAnchor="271.2857151031494" AnchorPane.topAnchor="22.571428298950195">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Button fx:id="lectureForm_Clearbtn" layoutX="530.0" layoutY="668.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="92.0" stylesheets="@../CSS/AdminFormStyles.css" text="Làm mới" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="28.0">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="680.0" layoutY="14.0" prefHeight="728.0" prefWidth="335.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="108.0" layoutY="14.0" prefHeight="145.0" prefWidth="119.0" stylesheets="@../CSS/AdminFormStyles.css">
+                                       <children>
+                                          <ImageView fx:id="AdminLectureImage" fitHeight="145.0" fitWidth="119.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Label layoutX="14.0" layoutY="206.0" text="Mã giảng viên: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureCode_label" layoutX="135.0" layoutY="206.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="256.0" text="Tên giảng viên: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureName_label" layoutX="135.0" layoutY="256.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="306.0" text="Ngày sinh: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureBirth_label" layoutX="135.0" layoutY="306.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureDepartment_label" layoutX="134.0" layoutY="356.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="356.0" text="Khoa: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureDegree_label" layoutX="134.0" layoutY="406.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="16.0" layoutY="406.0" text="Học vị: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lecturePhoneNum_label" layoutX="135.0" layoutY="456.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="456.0" text="Điện thoại: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureEmail_label" layoutX="135.0" layoutY="506.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="506.0" text="Email: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lectureAddress_label" layoutX="135.0" layoutY="566.0" text="Label">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="15.0" layoutY="566.0" text="Địa chỉ: ">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="adminForm" layoutX="10.0" layoutY="10.0" prefHeight="736.0" prefWidth="1009.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="708.0" prefWidth="984.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="AdminForm_tableView" layoutX="14.0" layoutY="55.0" prefHeight="445.0" prefWidth="973.0" AnchorPane.bottomAnchor="228.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="55.0">
+                                      <columns>
+                                        <TableColumn fx:id="AdminForm_codeCol" prefWidth="141.0" text="Mã admin" />
+                                        <TableColumn fx:id="AdminForm_nameCol" prefWidth="319.0" text="Họ và tên" />
+                                          <TableColumn fx:id="AdminForm_emailCol" prefWidth="271.0" text="Email" />
+                                          <TableColumn fx:id="AdminForm_phoneCol" prefWidth="198.0" text="Điện thoại" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <FontAwesomeIcon glyphName="COG" layoutX="14.0" layoutY="38.0" size="2.5em">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Label layoutX="54.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Quản Lý Admin" />
+                                    <TextField fx:id="AdminForm_search" layoutX="646.0" layoutY="11.0" prefHeight="34.0" prefWidth="262.0" promptText="Tìm kiếm" styleClass="search" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.rightAnchor="93.0" AnchorPane.topAnchor="11.0" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="653.0" layoutY="34.0" size="1.5em" AnchorPane.rightAnchor="331.2857151031494" AnchorPane.topAnchor="18.571428298950195">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <AnchorPane layoutX="14.0" layoutY="514.0" prefHeight="200.0" prefWidth="972.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="514.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="48.0" text="Mã admin: ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="AdminForm_codeField" layoutX="123.0" layoutY="44.0" prefHeight="35.0" prefWidth="177.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="335.0" layoutY="48.0" text="Họ và tên: ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="AdminForm_nameField" layoutX="433.0" layoutY="44.0" prefHeight="35.0" prefWidth="185.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="62.0" layoutY="125.0" text="Email: ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="AdminForm_emailField" layoutX="123.0" layoutY="121.0" prefHeight="35.0" prefWidth="177.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="333.0" layoutY="125.0" text="Điện thoại: ">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="AdminForm_phoneField" layoutX="433.0" layoutY="121.0" prefHeight="35.0" prefWidth="185.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Button fx:id="AdminForm_addBtn" layoutX="672.0" layoutY="32.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm" AnchorPane.bottomAnchor="108.0" />
+                                          <Button fx:id="AdminForm_deleteBtn" layoutX="672.0" layoutY="109.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Xoá" AnchorPane.bottomAnchor="31.0" />
+                                          <Button fx:id="AdminForm_fixBtn" layoutX="794.0" layoutY="32.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Sửa" AnchorPane.bottomAnchor="108.0" />
+                                          <Button fx:id="AdminForm_clearBtn" layoutX="794.0" layoutY="109.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="100.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Làm mới" AnchorPane.bottomAnchor="31.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="departmentForm" layoutX="20.0" layoutY="20.0" prefHeight="736.0" prefWidth="1008.8" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="705.0" prefWidth="982.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane fx:id="departmentContent" layoutX="14.0" layoutY="455.2" prefHeight="258.0" prefWidth="900.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <Label layoutX="451.0" layoutY="196.0" prefHeight="26.0" prefWidth="49.0" text="Email: ">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="email_textField" layoutX="513.0" layoutY="192.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="414.0" layoutY="113.0" text="Điện thoại: ">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="phoneNum_textField" layoutX="513.0" layoutY="108.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="398.0" layoutY="33.0" text="Trưởng khoa: " AnchorPane.leftAnchor="398.0" AnchorPane.rightAnchor="398.0">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="dean_Textfield" layoutX="513.0" layoutY="29.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="54.0" layoutY="196.0" prefHeight="26.0" prefWidth="95.0" text="Tên viết tắt: ">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="departmentAbbreviateName_textfield" layoutX="161.0" layoutY="192.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="71.0" layoutY="113.0" text="Tên khoa: ">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="departmentName_textField" layoutX="161.0" layoutY="112.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Label layoutX="71.0" layoutY="33.0" text="Mã khoa: ">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="departmentCode_textField" layoutX="161.0" layoutY="30.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+                                          <Button fx:id="DepartmentForm_Fixbtn" layoutX="750.0" layoutY="73.0" mnemonicParsing="false" onAction="#onUpdateDepartment" prefHeight="50.0" prefWidth="100.0" stylesheets="@../CSS/AdminFormStyles.css" text="Sửa" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="73.0">
+                                             <styleClass>
+                                                <String fx:value="btn" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="DepartmentForm_Addbtn" layoutX="750.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAddDepartment" prefHeight="50.0" prefWidth="100.0" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm" AnchorPane.bottomAnchor="194.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="14.0">
+                                             <styleClass>
+                                                <String fx:value="btn" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="DepartmentForm_Deletebtn" layoutX="750.0" layoutY="132.0" mnemonicParsing="false" onAction="#onDeleteDepartment" prefHeight="50.0" prefWidth="100.0" stylesheets="@../CSS/AdminFormStyles.css" text="Xoá" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="132.0">
+                                             <styleClass>
+                                                <String fx:value="btn" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button fx:id="DepartmentForm_Clearbtn" layoutX="750.0" layoutY="192.0" mnemonicParsing="false" onAction="#onDeleteDepartment" prefHeight="50.0" prefWidth="100.0" stylesheets="@../CSS/AdminFormStyles.css" text="Làm mới" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="192.0">
+                                             <styleClass>
+                                                <String fx:value="btn" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="426.0" prefWidth="970.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="286.4000000000001" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                       <children>
+                                          <TableView fx:id="departmentTableView" layoutX="15.2" layoutY="58.4" onMouseClicked="#onTableClickedDepartment" prefHeight="354.0" prefWidth="943.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0">
+                                             <columns>
+                                                <TableColumn fx:id="departmentCode_col" prefWidth="64.79998701810837" text="Mã khoa" />
+                                                <TableColumn fx:id="departmentName_col" prefWidth="332.0000305175781" text="Tên khoa" />
+                                                <TableColumn fx:id="departmentAbbreviateName_col" prefWidth="70.39996337890625" text="Tên viết tắt" />
+                                                <TableColumn fx:id="dean_col" prefWidth="207.19989013671875" text="Trưởng khoa" />
+                                                <TableColumn fx:id="phoneNum_col" prefWidth="103.199951171875" text="Điện thoại" />
+                                                <TableColumn fx:id="email_col" prefWidth="162.400146484375" text="email" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                          <FontAwesomeIcon glyphName="BOOK" layoutX="33.0" layoutY="32.0" size="2.5em">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </FontAwesomeIcon>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="radius" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                    <Label layoutX="84.0" layoutY="10.0" prefHeight="39.0" prefWidth="198.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Quản lý khoa" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="classForm" layoutX="10.0" layoutY="10.0" prefHeight="746.0" prefWidth="1019.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="721.0" prefWidth="976.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="ClassForm_tableView" layoutX="16.0" layoutY="62.0" prefHeight="470.0" prefWidth="969.0" AnchorPane.bottomAnchor="196.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="62.0">
+                                      <columns>
+                                        <TableColumn fx:id="ClassForm_classCol" prefWidth="113.0" text="Lớp" />
+                                        <TableColumn fx:id="ClassForm_courseCol" prefWidth="132.0" text="Khoá" />
+                                          <TableColumn fx:id="ClassForm_departmentCol" prefWidth="212.0" text="Khoa" />
+                                          <TableColumn fx:id="ClassForm_majorForm" prefWidth="151.0" text="Chuyên ngành" />
+                                          <TableColumn fx:id="ClassForm_headMasterCol" prefWidth="261.0" text="Giảng viên chủ nhiệm" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <Label layoutX="58.0" layoutY="7.0" prefHeight="39.0" prefWidth="198.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Quản lý lớp" AnchorPane.leftAnchor="58.0" AnchorPane.topAnchor="7.0" />
+                                    <FontAwesomeIcon glyphName="BOOKMARK" layoutX="25.0" layoutY="45.0" size="2.5em" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="19.285715103149414">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <TextField fx:id="ClassForm_Search" layoutX="617.0" layoutY="18.0" prefHeight="34.0" prefWidth="271.0" promptText="Tìm kiếm" styleClass="search" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.rightAnchor="113.0" AnchorPane.topAnchor="18.0" />
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="622.0" layoutY="37.0" size="1.5em" AnchorPane.rightAnchor="362.2857151031494" AnchorPane.topAnchor="21.571428298950195">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.5764706134796143" green="0.16078431904315948" blue="0.11764705926179886" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.929411768913269" green="0.12941177189350128" blue="0.22745098173618317" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Label layoutX="61.0" layoutY="545.0" text="Lớp: " AnchorPane.bottomAnchor="156.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ClassForm_classField" layoutX="112.0" layoutY="541.0" prefHeight="35.0" prefWidth="195.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="152.0" />
+                                    <Label layoutX="49.0" layoutY="611.0" text="Khoá: " AnchorPane.bottomAnchor="90.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ClassForm_courseField" layoutX="112.0" layoutY="607.0" prefHeight="35.0" prefWidth="195.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="86.0" />
+                                    <Label layoutX="484.0" layoutY="547.0" text="Khoa: " AnchorPane.bottomAnchor="153.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="ClassForm_departmentBox" layoutX="539.0" layoutY="547.0" prefWidth="245.0" AnchorPane.bottomAnchor="145.0" />
+                                    <Label layoutX="410.0" layoutY="670.0" text="Chuyên ngành: " AnchorPane.bottomAnchor="30.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="ClassForm_majorField" layoutX="544.0" layoutY="666.0" prefHeight="35.0" prefWidth="225.0" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="26.0" />
+                                    <Label layoutX="477.0" layoutY="613.0" text="GVCN: " AnchorPane.bottomAnchor="87.0">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="ClassForm_HeadLectureBox" layoutX="541.0" layoutY="609.0" prefWidth="244.0" AnchorPane.bottomAnchor="83.0" />
+                                    <Button fx:id="ClassForm_clearBtn" layoutX="896.0" layoutY="635.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="115.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Làm mới" AnchorPane.bottomAnchor="27.0" />
+                                    <Button fx:id="ClassForm_deleteBtn" layoutX="1040.0" layoutY="631.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="115.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Xoá" AnchorPane.bottomAnchor="31.0" />
+                                    <Button fx:id="ClassForm_addBtn" layoutX="896.0" layoutY="547.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="115.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Thêm" AnchorPane.bottomAnchor="115.0" />
+                                    <Button fx:id="ClassForm_fixBtn" layoutX="1040.0" layoutY="547.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="115.0" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Sửa" AnchorPane.bottomAnchor="115.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="367.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dacs1.Controller.Admin.CreateAccountController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@../CSS/AdminFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <styleClass>
+            <String fx:value="white-bg" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" styleClass="heading" stylesheets="@../CSS/AdminFormStyles.css" text="Tạo tài khoản" />
+            <TextField fx:id="usernameField" layoutX="112.0" layoutY="87.0" prefHeight="38.0" prefWidth="240.0" promptText="Tên đăng nhập" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+            <FontAwesomeIcon glyphName="USER" layoutX="82.0" layoutY="115.0" size="2em" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="84.0" layoutY="164.0" size="2em" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="84.0" layoutY="212.0" size="2em" />
+            <PasswordField fx:id="newPassField" layoutX="112.0" layoutY="137.0" prefHeight="38.0" prefWidth="240.0" promptText="Nhập mật khẩu" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+            <PasswordField fx:id="comfirmPassField" layoutX="112.0" layoutY="186.0" prefHeight="38.0" prefWidth="240.0" promptText="Xác nhận mật khẩu" styleClass="form-field" stylesheets="@../CSS/AdminFormStyles.css" />
+            <Button fx:id="comfirmBtn" layoutX="168.0" layoutY="267.0" mnemonicParsing="false" styleClass="btn" stylesheets="@../CSS/AdminFormStyles.css" text="Xác nhận" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dacs1.Controller.LectureController">
+   <children>
+      <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <left>
+                  <AnchorPane styleClass="nav-form" stylesheets="@../CSS/LectureFormStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <FontAwesomeIcon fill="WHITE" glyphName="USERS" layoutX="67.0" layoutY="96.0" size="7em" />
+                        <Label layoutX="77.0" layoutY="118.0" text="Xin chào," textFill="WHITE">
+                           <font>
+                              <Font name="Tahoma" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="name_nav" alignment="CENTER" layoutX="10.0" layoutY="146.0" prefHeight="26.0" prefWidth="204.0" text="Giảng Viên" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Line endX="100.0" layoutX="112.0" layoutY="179.0" startX="-100.0" stroke="WHITE" />
+                        <Button fx:id="info_nav" layoutX="13.0" layoutY="203.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/LectureFormStyles.css" text="    Thông tin cá nhân">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="USER" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="headLecture_nav" layoutX="13.0" layoutY="261.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/LectureFormStyles.css" text=" Lớp chủ nhiệm" AnchorPane.leftAnchor="13.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="GRADUATION_CAP" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="chat_nav" layoutX="13.0" layoutY="319.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="200.0" styleClass="nav-btn" stylesheets="@../CSS/LectureFormStyles.css" text="   Chat">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="COMMENTS" size="1.6em" />
+                           </graphic>
+                        </Button>
+                        <Button fx:id="logout_Btn" layoutX="13.0" layoutY="650.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="135.0" styleClass="signout-btn" stylesheets="@../CSS/LectureFormStyles.css" text="Đăng xuất" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="78.0">
+                           <graphic>
+                              <FontAwesomeIcon fill="WHITE" glyphName="SIGN_OUT" text="" />
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="infoForm" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane stylesheets="@../CSS/LectureFormStyles.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="713.0" prefWidth="982.0" stylesheets="@../CSS/LectureFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                       <children>
+                                          <FontAwesomeIcon glyphName="USER" layoutX="14.0" layoutY="40.0" size="2.5em">
+                                             <fill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color red="0.062745101749897" green="0.4117647111415863" blue="0.9098039269447327" />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="0.08627451211214066" green="0.27450981736183167" blue="0.4941176474094391" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </fill>
+                                          </FontAwesomeIcon>
+                                          <Label layoutX="45.0" layoutY="6.0" prefHeight="47.0" prefWidth="214.0" styleClass="heading" stylesheets="@../CSS/LectureFormStyles.css" text="Thông tin cá nhân" />
+                                          <AnchorPane layoutX="616.0" layoutY="90.0" prefHeight="337.0" prefWidth="249.0" stylesheets="@../CSS/LectureFormStyles.css">
+                                             <children>
+                                                <ImageView fx:id="lectureImageView" fitHeight="337.0" fitWidth="249.0" layoutX="1.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                             <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="radius" />
+                                                <String fx:value="shadow" />
+                                             </styleClass>
+                                          </AnchorPane>
+                                          <Label layoutX="299.0" layoutY="670.0" prefHeight="17.0" prefWidth="384.0" text="Thầy/cô cần cập nhật thông tin, vui lòng liên hệ Admin tại mục &quot;Chat&quot;" />
+                                          <Label fx:id="lecturePhoneNum" layoutX="238.0" layoutY="416.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="545.0" prefHeight="28.0" prefWidth="129.0" text="Địa chỉ:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureDegree" layoutX="238.0" layoutY="351.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureAddress" layoutX="238.0" layoutY="546.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureDepartment" layoutX="238.0" layoutY="286.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureEmail" layoutX="238.0" layoutY="481.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureId" layoutX="238.0" layoutY="91.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureBirth" layoutX="238.0" layoutY="221.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lectureName" layoutX="238.0" layoutY="156.0" text="Label">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="480.0" prefHeight="28.0" prefWidth="129.0" text="Email:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="415.0" prefHeight="28.0" prefWidth="129.0" text="Điện thoại: ">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="350.0" prefHeight="28.0" prefWidth="129.0" text="Học vị:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="285.0" prefHeight="28.0" prefWidth="129.0" text="Khoa:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="220.0" prefHeight="28.0" prefWidth="129.0" text="Ngày sinh:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="38.0" layoutY="155.0" prefHeight="28.0" prefWidth="136.0" text="Tên giảng viên:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="37.0" layoutY="90.0" prefHeight="28.0" prefWidth="129.0" text="Mã giảng viên:">
+                                             <font>
+                                                <Font name="System Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <styleClass>
+                                          <String fx:value="shadow" />
+                                          <String fx:value="radius" />
+                                          <String fx:value="white-bg" />
+                                       </styleClass>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="headLectureClassForm" layoutX="208.0" layoutY="173.0" prefHeight="736.0" prefWidth="1008.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="728.0" prefWidth="1003.0" stylesheets="@../CSS/LectureFormStyles.css" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="radius" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="80.0" layoutY="4.0" prefHeight="47.0" prefWidth="214.0" styleClass="heading" stylesheets="@../CSS/LectureFormStyles.css" text="Lớp chủ nhiệm" />
+                                    <FontAwesomeIcon glyphName="GRADUATION_CAP" layoutX="28.0" layoutY="43.0" size="2.5em">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.062745101749897" green="0.4117647111415863" blue="0.9098039269447327" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.08627451211214066" green="0.27450981736183167" blue="0.4941176474094391" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <TextField fx:id="LectureForm_search" layoutX="614.0" layoutY="25.0" prefHeight="35.0" prefWidth="249.0" promptText="Tìm kiếm" styleClass="search" stylesheets="@../CSS/LectureFormStyles.css" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="25.0" />
+                                    <TableView fx:id="StudentForm_tableView" layoutX="15.2" layoutY="92.0" prefHeight="575.0" prefWidth="954.0" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="92.0">
+                                       <columns>
+                                          <TableColumn fx:id="LectureForm_stuCodeCol" prefWidth="92.79998433589935" text="Mã sinh Viên" />
+                                          <TableColumn fx:id="LectureForm_stuNameCol" prefWidth="218.0" text="Họ Và Tên" />
+                                          <TableColumn fx:id="LectureForm_stuBirthCol" prefWidth="121.0" text="Ngày sinh" />
+                                          <TableColumn fx:id="LectureForm_stuGenderCol" prefWidth="77.0" text="Giới tính" />
+                                          <TableColumn fx:id="LectureForm_stuPhoneCol" prefWidth="117.0" text="Điện thoại" />
+                                          <TableColumn fx:id="LectureForm_stuEmailCol" prefWidth="216.0" text="email" />
+                                          <TableColumn fx:id="LectureForm_stuAddressCol" prefWidth="131.0" text="Địa chỉ" />
+                                       </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                    <FontAwesomeIcon glyphName="SEARCH" layoutX="621.0" layoutY="48.0" size="1.5em" text="" AnchorPane.rightAnchor="365.2857151031494" AnchorPane.topAnchor="32.571428298950195">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.062745101749897" green="0.4117647111415863" blue="0.9098039269447327" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.08627451211214066" green="0.27450981736183167" blue="0.4941176474094391" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                    </FontAwesomeIcon>
+                                    <Label layoutX="47.0" layoutY="61.0" text="Lớp:">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ComboBox fx:id="LectureForm_classBox" layoutX="80.0" layoutY="53.0" prefWidth="150.0" />
+                                    <Label layoutX="307.0" layoutY="682.0" text="Thầy/cô cần cập nhật thông tin, vui lòng liên hệ Admin tại mục &quot;Chat&quot;" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

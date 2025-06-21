@@ -1,0 +1,141 @@
+/* ========== BẢNG CHAT ========== */
+* {
+    /* BẢNG MÀU CHÍNH */
+    -primary-dark: #b48a00;
+    -primary-medium: #ffd600;
+    -primary-light: #fff9c4;
+    -primary-gradient: linear-gradient(to bottom right, -primary-dark, -primary-medium);
+
+    /* MÀU NỔI */
+    -accent-dark: #b28704;
+    -accent-light: #ffe082;
+    -accent-gradient: linear-gradient(to bottom right, -accent-light, -accent-dark);
+
+    /* MÀU NÚT BẤM KHI NHẤN */
+    -accent-dark-pressed: #a67c00;
+    -accent-light-pressed: #ffe57f;
+    -accent-pressed-gradient: linear-gradient(to bottom right, -accent-light-pressed, -accent-dark-pressed);
+
+    /* MÀU TRUNG TÍNH */
+    -background-light: #ffffff;
+    -background-field: #ffffff;
+    -text-dark: #333333;
+    -text-light: #fff8e1;
+    -border-light: rgba(255, 236, 179, 0.8);
+
+    /* HIỆU ỨNG BÓNG*/
+    -shadow-soft: dropshadow(gaussian, rgba(180,138,0,0.08), 6, 0, 1, 1);
+    -shadow-medium: dropshadow(gaussian, rgba(180,138,0,0.15), 8, 0, 0, 2);
+    -shadow-hover: dropshadow(gaussian, rgba(180,138,0,0.25), 10, 0, 0, 3);
+    -shadow-standard: dropshadow(three-pass-box, rgba(180,138,0,0.25), 6, 0.0, 0, 0);
+
+    /* Transitions */
+    -transition-quick: all 0.2s ease;
+    -transition-standard: all 0.3s ease;
+
+    /* CHỮ */
+    -font-family: "Arial", sans-serif;
+}
+
+.root, .stack-pane, .anchor-pane, .border-pane {
+    -fx-background-color: -background-light;
+}
+
+/* ========== DANH SÁCH USER ========== */
+.list-view {
+    -fx-background-color: -primary-light;
+    -fx-border-color: -primary-medium;
+    -fx-border-width: 0 1.5px 0 0;
+    -fx-font-family: -font-family;
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-dark;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: -text-dark;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 15px;
+    -fx-font-family: -font-family;
+}
+.list-cell:selected {
+    -fx-background-color: -primary-medium;
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+}
+
+/* ========== KHUNG CHAT ========== */
+.text-area {
+    -fx-background-color: -background-light;
+    -fx-border-color: -primary-medium;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-font-family: -font-family;
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-dark;
+    -fx-padding: 10px;
+    -fx-effect: -shadow-soft;
+}
+/* ========= NỀN ========= */
+.radius {
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+.white-bg {
+    -fx-background-color: -background-light;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+}
+
+/* ========== Ô NHẬP TIN NHẮN ========== */
+.text-field {
+    -fx-background-color: #fffde7;
+    -fx-border-color: -primary-medium;
+    -fx-border-width: 1.5px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-font-family: -font-family;
+    -fx-font-size: 15px;
+    -fx-text-fill: -text-dark;
+    -fx-padding: 8px 12px;
+    -fx-effect: -shadow-soft;
+}
+.text-field:focused {
+    -fx-border-color: -primary-dark;
+    -fx-effect: -shadow-hover;
+}
+
+/* ========== NÚT GỬI ========== */
+.button {
+    -fx-background-color: -primary-gradient;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-font-size: 15px;
+    -fx-font-family: -font-family;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-effect: -shadow-medium;
+    -fx-transition: -transition-standard;
+}
+.button:hover {
+    -fx-background-color: -accent-gradient;
+    -fx-effect: -shadow-hover;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+.button:pressed {
+    -fx-background-color: -accent-pressed-gradient;
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* ========== HEADING ==========*/
+.heading {
+    -fx-text-fill: -primary-gradient;
+    -fx-font-size: 22px;
+    -fx-font-family: -font-family;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 0;
+}
